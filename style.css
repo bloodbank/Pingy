@@ -9,7 +9,9 @@ body {
   color: #fff;
   font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 16pt;
+  overflow: hidden;
 }
+html, body { height:100%; margin:0; padding:0; }
 
 h1 {
   margin-bottom: 0;
@@ -32,7 +34,7 @@ h1 a:hover {
 }
 
 button {
-  background: #3a3a3a;
+  background: none;
   border: 0;
   border-radius: 4px;
   color: #fff;
@@ -44,9 +46,22 @@ button {
   text-decoration: none;
   width: 100%;
 }
+.button-server1 {
+  background: none;
+}
+.button-server2 {
+  background: none;
+}
 
 button:active {
   box-shadow: 0 0 10px 0 rgba(0,0,0,.5) inset;
+}
+.score-1-btn {
+  background: #125f6f;
+  border-radius: 0px;
+}
+.score-2-btn {
+background: #01c3e7;
 }
 
 .score-btn button {
@@ -85,10 +100,12 @@ select {
 
 .winner {
   color: #0a0;
+  font-size: 36px;
 }
 
 .loser {
   color: #a00;
+  font-size: 36px;
 }
 .score {
   font-size: 84px;
@@ -96,4 +113,62 @@ select {
 }
 .scorebtns {
   padding-top: 50px;
+}
+
+/* Bootstrap override */ 
+/*.navbar-inverse {
+  background-color: #01c3e7;
+  border-bottom: 20px solid #125f6f;
+}*/
+.navbar {
+  margin-bottom: 0px;
+}
+.navbar-inverse {
+  border: 0px;
+}
+.navbar-brand {
+  color: #fff !important;
+}
+/*.navbar-inverse .navbar-collapse {
+  border-bottom: 10px solid #fff;
+}*/
+
+.leftTable {
+  background-color: #01c3e7;
+  color: #fff;
+  text-align: left;
+  border-right: 7px solid #fff;
+  border-bottom: 15px solid #125f6f;
+  height:90vh;
+}
+.leftTable p {
+  font-size: 306px;
+  
+}
+.leftTable footer {
+  min-height: 50px;
+}
+.rightTable {
+  background-color: #125f6f;
+  color: #fff;
+  border-bottom: 15px solid #01c3e7;
+  border-left: 7px solid #fff;
+  height:90vh;
+}
+.rightTable p {
+  font-size: 306px;
+  
+}
+.rightTable footer {
+  min-height: 50px;
+}
+.text-center {
+  text-align: center;
+}
+
+.leftTable footer {
+  width: 40px;
+}
+.rightTable footer > button {
+  width: 40px;
 }

@@ -79,7 +79,7 @@
 
   function draw_server_buttons() {
     var btn1 = document.createElement('button');
-    btn1.classList.add('block');
+    btn1.classList.add('block', 'button-server1');
     btn1.innerText = 'Select Server';
     bind(btn1, 'click', function () {
       server = 1;
@@ -88,8 +88,9 @@
     el_scores_serv[0].innerHTML = '';
     el_scores_serv[0].appendChild(btn1);
 
+
     var btn2 = document.createElement('button');
-    btn2.classList.add('block');
+    btn2.classList.add('block', 'button-server2');
     btn2.innerText = 'Select Server';
     bind(btn2, 'click', function () {
       server = 2;
@@ -97,6 +98,7 @@
     });
     el_scores_serv[1].innerHTML = '';
     el_scores_serv[1].appendChild(btn2);
+
   }
 
   function bind(element, event, handler) {
