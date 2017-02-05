@@ -1,4 +1,4 @@
-Perng
+Pingy
 =====
 
 Ping Pong score keeping app. Live version at http://pingpong.code9.it
