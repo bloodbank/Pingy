@@ -139,10 +139,10 @@ select {
   text-align: left;
   border-right: 7px solid #fff;
   border-bottom: 15px solid #125f6f;
-  height:90vh;
+  height:80vh;
 }
 .leftTable p {
-  font-size: 306px;
+  font-size: 9em;
   
 }
 .leftTable footer {
@@ -153,10 +153,10 @@ select {
   color: #fff;
   border-bottom: 15px solid #01c3e7;
   border-left: 7px solid #fff;
-  height:90vh;
+  height:80vh;
 }
 .rightTable p {
-  font-size: 306px;
+  font-size: 9em;
   
 }
 .rightTable footer {
@@ -171,4 +171,17 @@ select {
 }
 .rightTable footer > button {
   width: 40px;
+}
+
+@media only screen and (max-width: 800px) {
+.rightTable p {
+  font-size: 6em;
+  
+}
+.leftTable p {
+  font-size: 6em;
+}
+.resetbutton {
+  width: 12%;
+}
 }
