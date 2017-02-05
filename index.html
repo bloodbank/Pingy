@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ping</title>
+    <link href="./bootstrap.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse mb-4">
+      <a class="navbar-brand" href="#">PingPong</a>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+      </div>
+    </nav>
+    
+    <div class="container-fluid">
+<div class="row">
+  <div class="col-xs-6 col-md-6 well"></div>
+  <div class="col-xs-6 col-md-6 well">.col-xs-6 .col-md-4</div>
+</div>
+</div>  
+    <table width="100%">
+      <tr>
+          <td id="score-1" class="score">&nbsp;</td>
+          <td id="score-2" class="score">&nbsp;</td>
+        </tr>
+        <tr class="scorebtns">
+          <td class="score-btn">
+            <button id="score-1-up">+</button>
+            <button id="score-1-down">-</button>
+          </td>
+          <td class="score-btn">
+            <button id="score-2-up">+</button>
+            <button id="score-2-down">-</button>
+          </td>
+        </tr>
+        <tr>
+          <td id="score-1-serving">&nbsp;</td>
+          <td id="score-2-serving">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button class="block" id="reset-score">Reset</button>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Score Limit:
+            <select id="score-limit">
+              <option value="10">10</option>
+              <option value="20">20</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    <script src="./perng.js"></script>
+    <!--<script src="./bootstrap.min.js"></script>-->
+  </body>
+</html>
