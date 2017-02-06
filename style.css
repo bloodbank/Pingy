@@ -177,6 +177,20 @@ select {
   .resetbutton {
     width: 12%;
   }
+  #score-1-serving {
+    font-size: 2em;
+  }
+  #score-2-serving {
+    font-size: 2em;
+  }
+  .button-server1 {
+    background: none;
+    font-size: 0.4em;
+  }
+  .button-server2 {
+    background: none;
+    font-size: 0.4em;
+  }
 }
 
 /* Bootstrap override */ 
