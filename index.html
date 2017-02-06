@@ -1,3 +1,7 @@
+<!--
+## App: Pingy
+## URL https://github.com/bloodbank/pingy
+!-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -31,8 +35,8 @@
           </span>
           <footer>
             <div class="btn-group btn-group-lg" role="group">
-            <button type="button" class="btn score-1-btn" id="score-1-up">+</button>
-            <button type="button" class="btn score-1-btn" id="score-1-down">-</button>
+              <button type="button" class="btn score-1-btn" id="score-1-up">+</button>
+              <button type="button" class="btn score-1-btn" id="score-1-down">-</button>
             </div>
           </footer>
         </div>
@@ -43,9 +47,9 @@
           &nbsp;
           </span>
           <footer class="pull-right">
-            <div class="btn-group btn-group-lg" role="group">
-            <button type="button" class="btn score-2-btn" id="score-2-up">+</button>
-            <button type="button" class="btn score-2-btn" id="score-2-down">-</button>
+            <div class="btn-group btn-group-lg pull-right" role="group">
+              <button type="button" class="btn score-2-btn" id="score-2-up">+</button>
+              <button type="button" class="btn score-2-btn" id="score-2-down">-</button>
             </div>
           </footer>
         </div>
@@ -57,40 +61,5 @@
     <script src="pingy.js"></script>
     <script src="bootstrap.min.js"></script>
     <script src="bootbox.min.js"></script>
-
-    <script type="text/javascript">
-    window.onload = function(){
-
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : sParameterName[1];
-        }
-    }
-};
-
-      var noname = getUrlParameter('noname');
-
-if (typeof noname === 'undefined') {
-      bootbox.prompt("What is the name of the left player?", 
-        function(result){ 
-          $('#leftplayername').text(result);
-            bootbox.prompt("What is the name of the right player?", 
-              function(result){ 
-                  $('#rightplayername').text(result); }); 
-       });
-      }
-
-
-       
-    ;}
-    </script>
   </body>
 </html>
