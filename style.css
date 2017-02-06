@@ -36,90 +36,145 @@ h1 a:hover {
 button {
   background: none;
   border: 0;
-  border-radius: 4px;
   color: #fff;
-  display: block;
   font-size: 12pt;
-  height: 50px;
-  line-height: 50px;
-  padding: 0 10px;
   text-decoration: none;
-  width: 100%;
 }
 .button-server1 {
   background: none;
+  font-size: 0.4em;
 }
 .button-server2 {
   background: none;
+  font-size: 0.4em;
 }
-
+#score-1-serving {
+  font-size: 4em;
+}
+#score-2-serving {
+  font-size: 4em;
+}
 button:active {
   box-shadow: 0 0 10px 0 rgba(0,0,0,.5) inset;
 }
 .score-1-btn {
   background: #125f6f;
-  border-radius: 0px;
+  padding: 3px;
 }
 .score-2-btn {
-background: #01c3e7;
+  background: #01c3e7;
+  padding: 3px;
 }
 
 .score-btn button {
   float: left;
   width: 50%;
 }
-
 .score-btn button:first-of-type {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-
 .score-btn button:last-of-type {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-
 button:focus {
   outline: 0;
 }
-
 table {
   margin: 0 auto;
   max-width: 700px;
 }
-
 table tr td {
   width: 50%;
   height: 85px;
   text-align: center;
 }
-
 select {
   font-size: 20pt;
 }
-
 .winner {
   color: #0a0;
   font-size: 36px;
 }
-
 .loser {
   color: #a00;
   font-size: 36px;
 }
 .score {
-  font-size: 84px;
-  
+  font-size: 84px; 
 }
 .scorebtns {
   padding-top: 50px;
 }
+.leftTable {
+  background-color: #01c3e7;
+  color: #fff;
+  text-align: left;
+  border-right: 4px solid #fff;
+  border-top: 3px solid #fff;
+  height:80vh;
+}
+.leftTable p {
+  font-size: 9em;
+}
+.leftTable footer {
+
+  min-height: 30px;
+  bottom:0;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  left: 0;
+  border-bottom: 5px #fff solid;
+}
+.rightTable {
+  background-color: #125f6f;
+  color: #fff;
+  
+  border-left: 4px solid #fff;
+  height:80vh;
+  border-top: 3px solid #fff;
+}
+.rightTable p {
+  font-size: 9em;
+}
+.rightTable footer {
+  min-height: 50px;
+  bottom:0;
+  position: absolute;
+  overflow: hidden;
+  right: 0px;
+    width: 100%;
+  
+  border-bottom: 5px #fff solid;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.leftTable footer {
+    min-height: 50px;
+}
+.rightTable footer > button {
+  width: 40px;
+}
+
+@media only screen and (max-width: 800px) {
+  .rightTable p {
+    font-size: 6em;
+  }
+  .leftTable p {
+    font-size: 6em;
+  }
+  .resetbutton {
+    width: 12%;
+  }
+}
 
 /* Bootstrap override */ 
-/*.navbar-inverse {
-  background-color: #01c3e7;
-  border-bottom: 20px solid #125f6f;
-}*/
+
 .navbar {
   margin-bottom: 0px;
 }
@@ -129,59 +184,8 @@ select {
 .navbar-brand {
   color: #fff !important;
 }
-/*.navbar-inverse .navbar-collapse {
-  border-bottom: 10px solid #fff;
-}*/
-
-.leftTable {
-  background-color: #01c3e7;
-  color: #fff;
-  text-align: left;
-  border-right: 7px solid #fff;
-  border-bottom: 15px solid #125f6f;
-  height:80vh;
-}
-.leftTable p {
-  font-size: 9em;
-  
-}
-.leftTable footer {
-  min-height: 50px;
-}
-.rightTable {
-  background-color: #125f6f;
-  color: #fff;
-  border-bottom: 15px solid #01c3e7;
-  border-left: 7px solid #fff;
-  height:80vh;
-}
-.rightTable p {
-  font-size: 9em;
-  
-}
-.rightTable footer {
-  min-height: 50px;
-}
-.text-center {
-  text-align: center;
+.modal {
+  color: #000;
 }
 
-.leftTable footer {
-  width: 40px;
-}
-.rightTable footer > button {
-  width: 40px;
-}
-
-@media only screen and (max-width: 800px) {
-.rightTable p {
-  font-size: 6em;
-  
-}
-.leftTable p {
-  font-size: 6em;
-}
-.resetbutton {
-  width: 12%;
-}
-}
+/* End Bootstrap Override */
