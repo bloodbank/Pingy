@@ -38,6 +38,13 @@ h1 a:visited {
 h1 a:hover {
   color: #2d92c4;
 }
+.navbar-inverse .navbar-nav>li>a {
+    font-size: 12px;
+}
+
+.resetbutton {
+padding: 0;
+}
 
 button {
   background: none;
@@ -47,18 +54,31 @@ button {
   text-decoration: none;
 }
 .button-server1 {
-  background: none;
+  background: red;
   font-size: 0.4em;
+    width: 100%;
+    padding: 10px;
+
 }
 .button-server2 {
-  background: none;
+ background: red;
   font-size: 0.4em;
+    width: 100%;
+        padding: 10px;
 }
 #score-1-serving {
-  font-size: 4em;
+  font-size: 2em;
+  
+  width: 85%;
+    text-align: right;
+    color: yellow;
 }
 #score-2-serving {
-  font-size: 4em;
+  font-size: 2em;
+
+  width: 85%;
+    text-align: left;
+    color: yellow;
 }
 button:active {
   box-shadow: 0 0 10px 0 rgba(0,0,0,.5) inset;
@@ -100,12 +120,14 @@ select {
   font-size: 20pt;
 }
 .winner {
-  color: #0a0;
-  font-size: 36px;
+  color: #0a0 !important;
+  font-size: 3em;
+  font-weight: bold;
 }
 .loser {
-  color: #a00;
-  font-size: 36px;
+  color: #a00  !important;
+  font-size: 3em;
+  font-weight: bold;
 }
 .score {
   font-size: 84px; 
@@ -119,6 +141,7 @@ select {
   text-align: left;
   border-right: 4px solid #fff;
   border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
   height:80vh;
 }
 .leftTable p {
@@ -137,7 +160,7 @@ select {
 .rightTable {
   background-color: #125f6f;
   color: #fff;
-  
+  border-bottom: 3px solid #fff;
   border-left: 4px solid #fff;
   height:80vh;
   border-top: 3px solid #fff;

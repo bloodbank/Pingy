@@ -63,6 +63,7 @@
       }
 
       function draw_winner(winner) {
+
         el_scores_serv[0].innerText = (winner == 1 ? 'Winner' : 'Loser');
         el_scores_serv[0].classList.add(winner == 1 ? 'winner' : 'loser');
 
@@ -108,6 +109,13 @@
         element.addEventListener(event, handler);
       }
 
+      bind(document.querySelector('#leftTable'), 'click', function () {
+                if (server == 0 || won) {
+          return;
+        }
+        change_score(1, 1);
+      });
+
       bind(document.querySelector('#score-1-up'), 'click', function () {
         if (server == 0 || won) {
           return;
@@ -120,6 +128,13 @@
           return;
         }
         change_score(1, -1);
+      });
+
+      bind(document.querySelector('#rightTable'), 'click', function () {
+        if (server == 0 || won) {
+          return;
+        }
+        change_score(2, 1);
       });
 
       bind(document.querySelector('#score-2-up'), 'click', function () {
@@ -149,9 +164,7 @@
       change_score(1, 0); // init the board
     })();
 
-$("#leftTable").click(function() {
-  change_score(1, 1);
-});
+
 
 /*
   Get the URL Parameter
@@ -178,13 +191,13 @@ var getUrlParameter = function getUrlParameter(sParam) {
     Pingy PlayerNames
 */
 
+
     window.onload = function() {
 
-      // Get noname var from URL
-      var noname = getUrlParameter('noname');
+      var custominputs = getUrlParameter('custominputs');
 
       // If noname is not set, ask for names of players
-      if (typeof noname === 'undefined') {
+      if (custominputs) {
           bootbox.prompt("What is the name of the left player?",
               function(result) {
                 // Check if a name was typed
@@ -208,6 +221,99 @@ var getUrlParameter = function getUrlParameter(sParam) {
                 });
 
               });
-      };
+      }
+      else {
+
+
+bootbox.prompt({
+    title: "Select left player",
+    inputType: 'select',
+    inputOptions: [
+        {
+            text: 'Choose one...',
+            value: '',
+        },
+        {
+            text: 'Hallvard',
+            value: 'Hallvard',
+        },
+        {
+            text: 'Jøran',
+            value: 'Jøran',
+        },
+        {
+            text: 'Morten',
+            value: 'Morten',
+        },
+        {
+            text: 'Gaute',
+            value: 'Gaute',
+        },
+        {
+            text: 'Helge',
+            value: 'Helge',
+        },
+        {
+            text: 'Pål',
+            value: 'Pål',
+        },
+        {
+            text: 'Brian',
+            value: 'Brian',
+        },
+        {
+            text: 'Joakim',
+            value: 'Joakim',
+        }
+    ],
+    callback: function (result) {
+         $('#leftplayername').text(result);
+         bootbox.prompt({
+    title: "Select right player!",
+    inputType: 'select',
+    inputOptions: [
+        {
+            text: 'Hallvard',
+            value: 'Hallvard',
+        },
+        {
+            text: 'Jøran',
+            value: 'Jøran',
+        },
+        {
+            text: 'Morten',
+            value: 'Morten',
+        },
+        {
+            text: 'Gaute',
+            value: 'Gaute',
+        },
+        {
+            text: 'Helge',
+            value: 'Helge',
+        },
+        {
+            text: 'Pål',
+            value: 'Pål',
+        },
+        {
+            text: 'Brian',
+            value: 'Brian',
+        },
+        {
+            text: 'Joakim',
+            value: 'Joakim',
+        }
+    ],
+    callback: function (result) {
+         $('#rightplayername').text(result);
+    }
+});
+
+    }
+});
+      }
+      // Get noname var from URL
+
     }
 // End PlayerNames
