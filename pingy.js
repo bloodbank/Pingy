@@ -149,6 +149,10 @@
       change_score(1, 0); // init the board
     })();
 
+$("#leftTable").click(function() {
+  change_score(1, 1);
+});
+
 /*
   Get the URL Parameter
 */
