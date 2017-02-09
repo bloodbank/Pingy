@@ -1,62 +1,66 @@
+<!--
+## App: Pingy
+## URL https://github.com/bloodbank/pingy
+!-->
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ping</title>
-    <link href="./bootstrap.min.css" rel="stylesheet">
-    <link href="./style.css" rel="stylesheet">
-
+    <title>Pingy | code9.it</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse mb-4">
-      <a class="navbar-brand" href="#">PingPong</a>
-       <ul class="nav navbar-nav navbar-right" style="margin-right: 15px;">
-        <li><button class="block" id="reset-score">Reset</button></li>
+      <a class="navbar-brand" href="#">Pingy</a>
+        <ul class="nav navbar-nav navbar-right" style="margin-right: 15px;">
         <li>
           <select id="score-limit" style="background: none;color: #fff !important; border: 0px; font-size: 14px;">
             <option value="10">10</option>
             <option value="20">20</option>
           </select></li>
-
-
       </ul>
       <div class="collapse navbar-collapse" id="navbarCollapse">
-
       </div>
     </nav>
-    
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-xs-6 col-md-6 leftTable">
-      <h5>Left Player</h5>
-      <p class="text-center" id="score-1">&nbsp;</p>
-
-      <span class="pull-right" id="score-1-serving">
-      &nbsp;
-      </span>
-      <footer>
-        <button class="score-1-btn" id="score-1-up">+</button>
-        <button class="score-1-btn" id="score-1-down">-</button>
-      </footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-6 col-md-6 leftTable" id="leftTable">
+          <h5 id="leftplayername" contenteditable>Left Player</h5>
+          <p class="text-center" id="score-1">&nbsp;</p>
+          <span class="pull-right" id="score-1-serving">
+          &nbsp;
+          </span>
+          <footer>
+            <div class="btn-group btn-group-lg" role="group">
+              <button type="button" class="btn score-1-btn" id="score-1-up">+</button>
+              <button type="button" class="btn score-1-btn" id="score-1-down">-</button>
+            </div>
+          </footer>
+        </div>
+        <!-- !-->
+      <div class="col-xs-6 col-md-6 rightTable" id="rightTable">
+        <h5 id="rightplayername"  contenteditable style="text-align: right;">Right Player</h5>
+        <p class="text-center" id="score-2">&nbsp;</p>
+          <span class="pull-left" id="score-2-serving">
+          &nbsp;
+          </span>
+          <footer class="pull-right">
+            <div class="btn-group btn-group-lg pull-right" role="group">
+              <button type="button" class="btn score-2-btn" id="score-2-up">+</button>
+              <button type="button" class="btn score-2-btn" id="score-2-down">-</button>
+            </div>
+          </footer>
+        </div>
     </div>
-  <div class="col-xs-6 col-md-6 rightTable">
-    <h5 style="text-align: right;">Right Player</h5>
-    <p class="text-center" id="score-2">&nbsp;</p>
-      <span class="pull-left" id="score-2-serving">
-      &nbsp;
-      </span>
-      <footer class="pull-right">
-        <button class="score-2-btn" id="score-2-up">+</button>
-        <button class="score-2-btn" id="score-2-down">-</button>
-      </footer>
+    <footer><small class="text-muted"><button class="block resetbutton" id="reset-score">Reset</button></small><small class="pull-right">v1.0</small></footer>
     </div>
-</div>
-<footer><small class="text-muted">Lets go</small></footer>
-</div>  
-  
-    <script src="./perng.js"></script>
-    <!--<script src="./bootstrap.min.js"></script>-->
+    <!-- Scripts !-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="pingy.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="bootbox.min.js"></script>
   </body>
 </html>
